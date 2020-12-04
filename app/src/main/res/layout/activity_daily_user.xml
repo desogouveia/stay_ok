@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="20dp"
+        app:srcCompat="@drawable/addbutton" />
+
+    <TextView
+        android:id="@+id/how_was_ur_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Como foi seu dia ?"
+        android:textColorHint="#000000"
+        android:textSize="29sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/user_text_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Escreva algo."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="206dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/how_was_ur_day" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/how_was_ur_day">
+
+        <RadioButton
+            android:id="@+id/rbMelancholy"
+            android:layout_width="66dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/melancholy_mood_emoji"
+            android:button="@drawable/melancholy_mood_emoji_marked"
+            android:onClick="checkButton"
+            android:text="Horrível" />
+
+        <RadioButton
+            android:id="@+id/rbSad"
+            android:layout_width="66dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/sad_mood_emoji"
+            android:button="@drawable/sad_mood_emoji_marked"
+            android:onClick="checkButton"
+            android:text="Triste" />
+
+        <RadioButton
+            android:id="@+id/rbFine"
+            android:layout_width="66dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/fine_mood_emoji"
+            android:button="@drawable/fine_mood_emoji_marked"
+            android:onClick="checkButton"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/rbHappy"
+            android:layout_width="66dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/happy_mood_emoji"
+            android:button="@drawable/happy_mood_emoji_marked"
+            android:onClick="checkButton"
+            android:text="Feliz" />
+
+        <RadioButton
+            android:id="@+id/rbJoyful"
+            android:layout_width="66dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/joyful_mood_emoji"
+            android:button="@drawable/joyful_mood_emoji_marked"
+            android:onClick="checkButton"
+            android:text="Incrível" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
